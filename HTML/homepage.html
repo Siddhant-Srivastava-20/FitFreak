@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitFreak Home</title>
+  <link rel="stylesheet" href="../CSS/homepage.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+          crossorigin="anonymous" 
+          referrerpolicy="no-referrer" />
+</head>
+<body>
+<!-- 🔝 NAVBAR -->
+<nav class="navbar">
+<div class="logo">
+  <img src="../images/logo.png" alt="FitFreak Logo">
+  <span>FitFreak</span>
+</div>
+  <div class="hamburger" onclick="toggleMenu()">
+    ☰
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="./homepage.html">Home</a></li>
+    <li><a href="./index.html">Exercises</a></li>
+  </ul>
+  <div class="auth-buttons" id="authButtons">
+    <button class="login-btn">Login</button>
+    <button class="signup-btn">Sign Up</button>
+  </div>
+</nav>
+<!--  HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>TRACK YOUR WAY TO YOUR IDEAL BODY</h1>
+    <p>Join FitFreak and build your perfect fitness journey.</p>
+    <button class="cta-btn">Get Started</button>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61" />
+  </div>
+</section>
+
+<!--  STATS -->
+<section class="stats">
+  <div><h2>77K+</h2><p>Users</p></div>
+  <div><h2>800+</h2><p>Exercises</p></div>
+  <div><h2>2M+</h2><p>Workouts</p></div>
+  <div><h2>5K+</h2><p>Reviews</p></div>
+</section>
+
+<!--  SECTION -->
+<section class="feature">
+  <div class="text">
+    <h2>CRAFT YOUR PERFECT WORKOUT ROUTINES</h2>
+    <ul>
+      <li>Plan workouts easily</li>
+      <li>Track sets and reps</li>
+      <li>Monitor performance</li>
+    </ul>
+  </div>
+
+  <img src="img.avif">
+</section>
+
+<section class="feature reverse">
+  <div class="text">
+    <h2>KEEP TRACK OF YOUR PROGRESS</h2>
+    <ul>
+      <li>Track workouts and meals</li>
+      <li>Monitor body weight</li>
+      <li>View progress charts</li>
+    </ul>
+  </div>
+
+  <img src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba">
+</section>
+<section class="feature advanced">
+  <div class="feature-text">
+    <h2>CRAFT YOUR PERFECT <br><span>WORKOUT ROUTINES</span></h2>
+
+    <ul>
+      <li>Design weekly workout plans</li>
+      <li>Set reps, sets, and duration</li>
+      <li>Get guided workouts step-by-step</li>
+      <li>Track performance and progress</li>
+    </ul>
+  </div>
+
+  <div class="feature-img">
+    <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e" />
+  </div>
+</section>
+<section class="dev-section">
+  <h2>WEB VERSION NOT ENOUGH?<br>GET THE CODE, TOO!</h2>
+  <div class="dev-grid">
+    <div class="dev-card">
+      <div class="icon">🏋️</div>
+      <h3>Private Server</h3>
+      <p>Run your own fitness server for full control.</p>
+    </div>
+    <div class="dev-card">
+      <div class="icon">💻</div>
+      <h3>Use API</h3>
+      <p>Integrate workouts into your own apps easily.</p>
+    </div>
+    <div class="dev-card">
+      <div class="icon">🚀</div>
+      <h3>Build Your Own</h3>
+      <p>Customize and extend your fitness platform.</p>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- LOGO -->
+    <div class="footer-brand">
+      <h2> FitFreak</h2>
+      <p>Your smart fitness partner for tracking workouts and progress.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Account</h4>
+      <p>Login</p>
+      <p>Register</p>
+      <p>Dashboard</p>
+      <p>Profile</p>
+    </div>
+    <div class="footer-col">
+      <h4>Features</h4>
+      <p>Exercises</p>
+      <p>Workout Plans</p>
+      <p>Progress Tracking</p>
+      <p>Nutrition</p>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <p>Help Center</p>
+      <p>Contact</p>
+      <p>Privacy Policy</p>
+      <p>Terms of Service</p>
+    </div>
+  </div>
+  <div class="footer-extra">
+    <div class="socials">
+      <span><i class="fa-brands fa-instagram"></i></span>
+      <span><i class="fa-brands fa-twitter"></i></span>
+      <span><i class="fa-brands fa-facebook"></i></span>
+      <span><i class="fa-brands fa-linkedin"></i></span>
+    </div>
+    <div class="apps">
+      <button>Google Play</button>
+      <button>App Store</button>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 FitFreak. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+  document.getElementById("authButtons").classList.toggle("active");
+}
+</script>
+</body>
+</html>

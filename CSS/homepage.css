@@ -1,0 +1,320 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+}
+/* logo image */
+.logo img {
+  height: 80px;
+}
+.navbar {
+  padding: 8px 60px;
+}
+.logo span {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2563eb;
+}
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #334155;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+/* underline */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #2563eb;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* BUTTONS */
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.login-btn {
+  border: 1px solid #2563eb;
+  background: transparent;
+  color: #2563eb;
+}
+
+.login-btn:hover {
+  background: #2563eb;
+  color: white;
+}
+
+.signup-btn {
+  background: #2563eb;
+  border: none;
+  color: white;
+}
+
+.signup-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37,99,235,0.3);
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #2563eb;
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 80px;
+  gap: 80px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero-text p {
+  margin-top: 15px;
+  color: #64748b;
+}
+
+.cta-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+}
+
+.hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img img {
+  width: 600px;
+  height: 400px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* ===== STATS ===== */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  background: #f1f5f9;
+}
+
+.stats h2 {
+  color: #2563eb;
+}
+
+/* ===== FEATURE ===== */
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 40px;
+  gap: 60px;
+}
+
+.feature.reverse {
+  flex-direction: row-reverse;
+}
+
+.feature .text {
+  max-width: 500px;
+}
+
+.feature h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.feature li {
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+.feature img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+}
+
+/* ===== DEV ===== */
+.dev-section {
+  background: #1e3a8a;
+  color: white;
+  padding: 80px;
+  text-align: center;
+}
+
+.dev-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.dev-card {
+  max-width: 260px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #1e3a8a;
+  color: white;
+  padding: 60px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: white;
+    padding: 15px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .auth-buttons {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .auth-buttons.active {
+    display: flex;
+  }
+
+  .auth-buttons button {
+    width: 80%;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .feature {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-img img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .dev-grid {
+    flex-direction: column;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
