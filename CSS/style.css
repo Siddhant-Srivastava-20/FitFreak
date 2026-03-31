@@ -1,0 +1,394 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #334155;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #2563eb;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===== BUTTONS ===== */
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.login-btn {
+  border: 1px solid #2563eb;
+  background: transparent;
+  color: #2563eb;
+}
+
+.login-btn:hover {
+  background: #2563eb;
+  color: white;
+}
+
+.signup-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+}
+
+.signup-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37,99,235,0.3);
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #2563eb;
+}
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.hero p {
+  margin-top: 10px;
+  color: #64748b;
+}
+
+.cta-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+}
+
+/* ===== CONTROLS ===== */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+input, select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: white;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr 250px;
+  gap: 30px;
+  padding: 30px 60px;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.container {
+  display: grid;
+  grid-template-columns: 250px 1fr 250px;
+  gap: 30px;
+  padding: 30px 60px;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* BOX */
+.filter-box {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+/* TITLE */
+.filter-box h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* SCROLL */
+.filter-list {
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+/* TOGGLE */
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  cursor: pointer;
+}
+
+.toggle input {
+  display: none;
+}
+
+/* SLIDER */
+.slider {
+  width: 42px;
+  height: 22px;
+  background: #e2e8f0;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.slider::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: 0.3s;
+}
+/* ACTIVE */
+.toggle input:checked + .slider {
+  background: #2563eb;
+}
+
+.toggle input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+/* TEXT */
+.label-text {
+  font-size: 16px;
+  color: #334155;
+}
+/* ===== GRID ===== */
+.exercise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  font-size: 16px;
+}
+
+.card p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: white;
+}
+
+/* ===== WORKOUT PLAN ===== */
+.workout-plan {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  height: fit-content;
+}
+
+.workout-plan li {
+  background: #f1f5f9;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 100%;
+}
+
+/* filter box */
+.filter-box {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.filter-box h3 {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #1e293b;
+}
+
+/* checkbox styling */
+.filter-box label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #475569;
+  cursor: pointer;
+}
+
+.filter-box input {
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+.remove-btn {
+  margin-left: 10px;
+  background: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+/* ===== TABLET ===== */
+@media (max-width: 900px) {
+
+  .navbar {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: white;
+    padding: 15px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .auth-buttons {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .auth-buttons.active {
+    display: flex;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  input, select {
+    width: 100%;
+  }
+
+  .exercise-grid {
+    grid-template-columns: 1fr;
+  }
+}

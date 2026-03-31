@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitFreak – Smart Workout Planner</title>
+
+  <link rel="stylesheet" href="../CSS/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<nav class="navbar">
+  <div class="logo">FitFreak</div>
+  <ul class="nav-links">
+    <li><a href="./homepage.html">Home</a></li>
+    <li><a href="./index.html">Exercises</a></li>
+  </ul>
+  <div class="auth-buttons">
+    <button class="login-btn">Login</button>
+    <button class="signup-btn">Sign Up</button>
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+</nav>
+<section class="hero">
+  <h1>Build Your Perfect Workout 💪</h1>
+  <p>Search, filter and create your personalized fitness plan</p>
+  <button class="cta-btn">Get Started</button>
+</section>
+<section class="controls">
+  <input type="text" id="searchInput" placeholder="Search exercises..." />
+
+  <select id="sortOption">
+    <option value="">Sort By</option>
+    <option value="az">A-Z</option>
+  </select>
+</section>
+<main class="container">
+  <aside class="sidebar">
+<div class="filter-box">
+  <h2>Category</h2>
+  <div class="filter-list">
+    <label class="toggle">
+      <input type="checkbox" value="Abs" class="category-filter">
+      <span class="slider"></span>
+      <span class="label-text">Abs</span>
+    </label>
+    <label class="toggle">
+      <input type="checkbox" value="Arms" class="category-filter">
+      <span class="slider"></span>
+      <span class="label-text">Arms</span>
+    </label>
+    <label class="toggle">
+      <input type="checkbox" value="Back" class="category-filter">
+      <span class="slider"></span>
+      <span class="label-text">Back</span>
+    </label>
+    <label class="toggle">
+      <input type="checkbox" value="Chest" class="category-filter">
+      <span class="slider"></span>
+      <span class="label-text">Chest</span>
+    </label>
+    <label class="toggle">
+      <input type="checkbox" value="Legs" class="category-filter">
+      <span class="slider"></span>
+      <span class="label-text">Legs</span>
+    </label>
+    <label class="toggle">
+      <input type="checkbox" value="Shoulders" class="category-filter">
+      <span class="slider"></span>
+      <span class="label-text">Shoulders</span>
+    </label>
+  </div>
+</div>
+<div class="filter-box">
+  <h2>Muscles</h2>
+  <div class="filter-list">
+    <label class="toggle"><input type="checkbox"><span class="slider"></span><span class="label-text">Anterior deltoid</span></label>
+    <label class="toggle"><input type="checkbox"><span class="slider"></span><span class="label-text">Biceps brachii</span></label>
+    <label class="toggle"><input type="checkbox"><span class="slider"></span><span class="label-text">Biceps femoris</span></label>
+    <label class="toggle"><input type="checkbox"><span class="slider"></span><span class="label-text">Brachialis</span></label>
+    <label class="toggle"><input type="checkbox"><span class="slider"></span><span class="label-text">Gastrocnemius</span></label>
+    <label class="toggle"><input type="checkbox"><span class="slider"></span><span class="label-text">Gluteus maximus</span></label>
+    <label class="toggle"><input type="checkbox"><span class="slider"></span><span class="label-text">Latissimus dorsi</span></label>
+  </div>
+</div>
+<div class="filter-box">
+  <h2>Equipment</h2>
+  <div class="filter-list">
+    <label class="toggle">
+      <input type="checkbox" value="Barbell" class="equipment-filter">
+      <span class="slider"></span>
+      <span class="label-text">Barbell</span>
+    </label>
+    <label class="toggle">
+      <input type="checkbox" value="Bench" class="equipment-filter">
+      <span class="slider"></span>
+      <span class="label-text">Bench</span>
+    </label>
+    <label class="toggle">
+      <input type="checkbox" value="Dumbbell" class="equipment-filter">
+      <span class="slider"></span>
+      <span class="label-text">Dumbbell</span>
+    </label>
+    <label class="toggle">
+      <input type="checkbox" value="Bodyweight" class="equipment-filter">
+      <span class="slider"></span>
+      <span class="label-text">Bodyweight</span>
+    </label>
+
+  </div>
+</div>
+  </aside>
+  <section id="exerciseList" class="exercise-grid"></section>
+  <aside class="workout-plan">
+    <h2>My Workout Plan</h2>
+    <ul id="planList"></ul>
+  </aside>
+
+</main>
+<script src="../JavaScript/api.js"></script>
+<script src="../JavaScript/utils.js"></script>
+<script src="../JavaScript/script.js"></script>
+<script>
+function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("active");
+  document.querySelector(".auth-buttons").classList.toggle("active");
+}
+</script>
+</body>
+</html>
