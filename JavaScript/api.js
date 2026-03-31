@@ -13,7 +13,5 @@ async function fetchExercises() {
       equipment: ex.equipment.map(eq => eq.name).join(", ") || "Bodyweight"
     };
   });
-
-  // remove nulls
   return englishExercises.filter(Boolean);
 }

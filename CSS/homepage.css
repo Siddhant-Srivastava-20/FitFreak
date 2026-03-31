@@ -24,7 +24,6 @@ body {
   display: flex;
   align-items: center;
 }
-/* logo image */
 .logo img {
   height: 80px;
 }
