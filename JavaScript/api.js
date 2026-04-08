@@ -3,7 +3,7 @@ async function fetchExercises() {
   const data = await res.json();
 
   const englishExercises = data.results.map(ex => {
-    const englishTranslation = ex.translations.find(t => t.language === 2); // 2 = English
+    const englishTranslation = ex.translations.find(t => t.language === 2); 
 
     if (!englishTranslation) return null;
 
