@@ -2,7 +2,6 @@
   "buildCommand": "echo 'Static site'",
   "installCommand": "echo 'No build needed'",
   "framework": "static",
-  "public": ".",
   "rewrites": [
     {
       "source": "/(.*)",
